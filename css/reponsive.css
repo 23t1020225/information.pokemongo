@@ -1,0 +1,52 @@
+/* Mặc định cho máy tính */
+.container {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+/* Dành cho máy tính bảng */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 100%; /* Chiếm hết chiều rộng màn hình */
+        padding: 10px;
+    }
+}
+
+/* Dành cho điện thoại */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr; /* Menu theo dạng cột cho di động */
+    }
+
+    .menu img {
+        width: 80px; /* Giảm kích thước logo */
+    }
+}
+.fullcontainer {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử chuyển xuống dòng khi không đủ không gian */
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Chuyển thành cột trên màn hình nhỏ */
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    font-size: 16px; /* Cho máy tính */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Cho điện thoại */
+    }
+}
